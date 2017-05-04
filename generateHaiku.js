@@ -6,6 +6,11 @@ var parseDict = require('./parseDict');
 
 var cmudictFile = parseDict.readCmudictFile('./cmudict.txt');
 var data = parseDict.formatData(cmudictFile);
-var struct = [[5],[7],[5]];
+// var struct = [[5],[7],[5]];
+var struct = [
+  [2,3],
+  [1,3,3],
+  [3,2]
+];
 
 console.log(makeHaiku.createHaiku(struct, data.byCount));
